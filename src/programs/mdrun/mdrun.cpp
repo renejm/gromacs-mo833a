@@ -56,6 +56,9 @@
 
 #include <memory>
 
+#include <stdio.h>
+#include <sys/time.h>
+
 #include "gromacs/commandline/pargs.h"
 #include "gromacs/domdec/options.h"
 #include "gromacs/fileio/gmxfio.h"
@@ -73,9 +76,18 @@
 namespace gmx
 {
 
+double secnow() {
+    struct timeval tp;
+    struct timezone tzp;
+    gettimeofday(&tp,&tzp);
+    return ((double) tp.tv_sec + (double) tp.tv_usec * 1.e-6);
+}
+
 //! Implements C-style main function for mdrun
 int gmx_mdrun(int argc, char* argv[])
 {
+    int retval;
+    double starttime, elapsed;
     auto mdModules = std::make_unique<MDModules>();
 
     std::vector<const char*> desc = {
@@ -267,7 +279,13 @@ int gmx_mdrun(int argc, char* argv[])
 
     auto runner = builder.build();
 
-    return runner.mdrunner();
+    starttime = secnow();
+    retval = runner.mdrunner(); //Measuring the time spent here!!!
+    elapsed = secnow() - starttime;
+    printf("[MO833]: runner.mdrunner() exec. time: %f secs\n", elapsed);
+
+    return retval;
+    //return runner.mdrunner();
 }
 
 } // namespace gmx

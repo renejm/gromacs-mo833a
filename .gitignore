@@ -23,6 +23,8 @@ lib*.pc
 .vscode
 build
 _build
+build-debug
+_build-debug
 CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing

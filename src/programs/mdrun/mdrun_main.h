@@ -37,7 +37,8 @@
 
 namespace gmx
 {
-
+	
+double secnow();
 int gmx_mdrun(int argc, char* argv[]);
 
 } // namespace gmx
