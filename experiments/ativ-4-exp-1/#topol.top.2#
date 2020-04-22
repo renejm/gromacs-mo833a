@@ -1,0 +1,56 @@
+;
+;	File 'topol.top' was generated
+;	By user: rene (0)
+;	On host: lmcad-torvalds
+;	At date: Wed Apr 22 00:16:05 2020
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	  :-) GROMACS - gmx pdb2gmx, 2020.2-dev-20200320-7267a4fda-dirty-unknown (-:
+;	
+;	Executable:   /home/rene/MO833A/gromacs-mo833a/experiments/ativ-4-exp-1/../../build/bin/gmx
+;	Data prefix:  /home/rene/MO833A/gromacs-mo833a (source tree)
+;	Working dir:  /home/rene/MO833A/gromacs-mo833a/experiments/ativ-4-exp-1
+;	Command line:
+;	  gmx pdb2gmx -f 6LVN.pdb -o 6LVN_processed.gro -water spce
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "oplsaa.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_B.itp"
+#include "topol_Protein_chain_C.itp"
+#include "topol_Protein_chain_D.itp"
+
+; Include water topology
+#include "oplsaa.ff/spce.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "oplsaa.ff/ions.itp"
+
+[ system ]
+; Name
+SARS-COV-2 S2 SUBUNIT in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_B     1
+Protein_chain_C     1
+Protein_chain_D     1
+SOL                 6
+SOL                 9
+SOL                 5
+SOL                 2
+SOL             16638
