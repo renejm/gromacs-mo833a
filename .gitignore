@@ -22,8 +22,8 @@ lib*.pc
 .cproject
 .vscode
 build
-_build-debug
-build-debug
+_build_nompi
+build_nompi
 _build
 CMakeLists.txt.user
 /VersionInfo*.cmake
