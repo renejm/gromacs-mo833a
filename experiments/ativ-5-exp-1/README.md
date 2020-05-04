@@ -76,6 +76,7 @@ Para criar outras VMs com a mesma configuração que VM recém criada, é necess
 
 ![](https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-5-exp-1/experiments/ativ-5-exp-1/images/security-group.png)
  *O campo *Source* na primeira regra deve ser o próprio *security group*.
+
  7. Clicar no botão *Save rules*.
  
 #### Criando múltiplas instâncias
