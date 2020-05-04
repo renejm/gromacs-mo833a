@@ -99,14 +99,14 @@ Criar duas VMs baseadas na imagem (AMI) criada anteriormente. Para isso:
 
 #### Executando o GROMACS em paralelo na nuvem
 
- 1. Acessar cada uma das VMs recém criadas e configurar o arquivo ```hostfile``` através dos seguintes comandos:
+ 1. Acessar uma das VMs recém criadas e configurar o arquivo ```hostfile``` através dos seguintes comandos:
 ```
 echo "<IP1> slots=2" > hostfile
 echo "<IP2> slots=2" >> hostfile
 ```
- onde **IP1** e **IP2** são os IPs das duas VMs recém criadas.
+ onde **IP1** e **IP2** são os IPs das outra duas VMs criadas.
 
- 2. Ir para o diretório ```experiments/exp-5-ativ-1``` e executar o comando:
+ 2. Ir para o diretório ```~/gromacs-mo833a/experiments/exp-5-ativ-1``` e executar o comando:
 ```
 ./runexp.sh
 ```
