@@ -66,7 +66,7 @@ Para criar outras VMs com a mesma configuração que VM recém criada, é necess
   
 #### Configurando a rede
 
-É necessário configurar a rede de forma que todas as VMs se comuniquem entre si. Pra isso:
+É necessário configurar a rede de forma que todas as VMs se comuniquem entre si. Para isso:
  1. Selecionar a opção **NETWORK & SECURITY -> Security Groups** no *side menu* do painel EC2;
  2. Clicar no borão **Create security group**;
  3. Preencher os campos **Security group name** e **Description**;
@@ -75,7 +75,7 @@ Para criar outras VMs com a mesma configuração que VM recém criada, é necess
  6. Adicionar duas novas regras, como na figura abaixo:
 
 ![](https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-5-exp-1/experiments/ativ-5-exp-1/images/security-group.png)
-
+ *O campo *Source* na primeira regra deve ser o próprio *security group*.
  7. Clicar no botão *Save rules*.
  
 #### Criando múltiplas instâncias
