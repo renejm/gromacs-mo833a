@@ -15,24 +15,24 @@
 
 #### 2.2 Medição do tempo de execução
 
- <p align="justify">Foi criada uma classe chamada ```Stopwatch``` (```src/stopwatch```) para realizar a medição dos tempos de execução. A classe ```Stopwatch``` possui três métodos públicos:</p>
+ <p align="justify">Foi criada uma classe chamada **Stopwatch** (**src/stopwatch**) para realizar a medição dos tempos de execução. A classe **Stopwatch** possui três métodos públicos:</p>
 <ul>
-<li>**```setinittime```:** Este método é responsável por coletar o *current time* para marcar o início da execução do experimento;</li>
-<li>**```setstarttime```:** É chamado no início da *paramount iteration*. Armazena o *current time* e é responsável por calcular o tempo de inicialização do programa;</li>
-<li>**```setendtime```:** É chamado no final da *paramount iteration*. Calcula o tempo decorrido desde a inicialização do programa e desde o início da *paramount iteration* atual.</li>
+<li>**setinittime:** Este método é responsável por coletar o *current time* para marcar o início da execução do experimento;</li>
+<li>**setstarttime:** É chamado no início da *paramount iteration*. Armazena o *current time* e é responsável por calcular o tempo de inicialização do programa;</li>
+<li>**setendtime:** É chamado no final da *paramount iteration*. Calcula o tempo decorrido desde a inicialização do programa e desde o início da *paramount iteration* atual.</li>
 
 #### 2.3 Scripts
 
 <p align="justify">Para realizar o experimento, basta executar os *scripts* na seguinte ordem:</p>
 <ul>
-<li>**```build-gromacs.sh```:** Compila o GROMACS no modo release;</li>
-<li>**```config-gromacs.sh```:** Configura o ambiente para executar o experimento;</li>
-<li>**```runexp.sh```:** Executa o experimento quatro vezes:</li>
+<li>**build-gromacs.sh:** Compila o GROMACS no modo release;</li>
+<li>**config-gromacs.sh:** Configura o ambiente para executar o experimento;</li>
+<li>**runexp.sh:** Executa o experimento quatro vezes:</li>
  <ul>
- <li> Com 1 *thread* OPENMP, gerando o arquivo de resultados ```paramount-iteration-results-01thread.csv```;</li>
- <li> Com 4 *threads* OPENMP, gerando o arquivo de resultados ```paramount-iteration-results-04thread.csv```;</li>
- <li> Com 8 *threads* OPENMP, gerando o arquivo de resultados ```paramount-iteration-results-08thread.csv```;</li>
- <li> Com 16 *threads* OPENMP, gerando o arquivo de resultados ```paramount-iteration-results-16thread.csv```.</li>
+ <li> Com 1 *thread* OPENMP, gerando o arquivo de resultados **paramount-iteration-results-01thread.csv**;</li>
+ <li> Com 4 *threads* OPENMP, gerando o arquivo de resultados **paramount-iteration-results-04thread.csv**;</li>
+ <li> Com 8 *threads* OPENMP, gerando o arquivo de resultados **paramount-iteration-results-08thread.csv**;</li>
+ <li> Com 16 *threads* OPENMP, gerando o arquivo de resultados **paramount-iteration-results-16thread.csv**.</li>
  </ul>
 
 ### 3. Apresentação e Análise dos Resultados
