@@ -45,27 +45,27 @@ Os gráficos abaixo mostram o tempo de execução das <i>paramount iterations</i
 
 ### 1 thread OPENMP:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-6-exp-1/experiments/ativ-6-exp-1/images/openmp01thread.png">
+  <img width="800" src="https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-6-exp-1/experiments/ativ-6-exp-1/images/openmp01thread.png">
 </p>
 <p align="justify">Foi gasto o tempo de 0,097442 segundos da inicialização até o primeiro <i>loop</i>. O tempo gasto nas <i>paramount iterations</i> foram de 85,353445 segundos e o tempo total observado foi de 85,474 segundos.</p>
 
 
 ### 4 threads OPENMP:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-6-exp-1/experiments/ativ-6-exp-1/images/openmp04threads.png">
+  <img width="800" src="https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-6-exp-1/experiments/ativ-6-exp-1/images/openmp04threads.png">
 </p>
 <p align="justify">Foi gasto o tempo de 0,139931 segundos da inicialização até o primeiro <i>loop</i>. O tempo gasto nas <i>paramount iterations</i> foram de 37,963839 segundos e o tempo total observado foi de 38,1187 segundos.</p>
 
 
 ### 8 threads OPENMP:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-6-exp-1/experiments/ativ-6-exp-1/images/openmp08threads.png">
+  <img width="800" src="https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-6-exp-1/experiments/ativ-6-exp-1/images/openmp08threads.png">
 </p>
 <p align="justify">Foi gasto o tempo de 0,149487 segundos da inicialização até o primeiro <i>loop</i>. O tempo gasto nas <i>paramount iterations</i> foram de 32,561004 segundos e o tempo total observado foi de 32,7304 segundos.</p>
 
 
 ### 16 threads OPENMP:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-6-exp-1/experiments/ativ-6-exp-1/images/openmp16threads.png">
+  <img width="800" src="https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-6-exp-1/experiments/ativ-6-exp-1/images/openmp16threads.png">
 </p>
 <p align="justify">Foi gasto o tempo de 0,111382 segundos da inicialização até o primeiro <i>loop</i>. O tempo gasto nas <i>paramount iterations</i> foram de 32,424015 segundos e o tempo total observado foi de 32,5517 segundos.</p>
