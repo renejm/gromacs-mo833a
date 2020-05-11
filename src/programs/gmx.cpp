@@ -47,11 +47,16 @@
 
 #include "legacymodules.h"
 
+#include "stopwatch.h"
+
 int main(int argc, char* argv[])
 {
     gmx::CommandLineProgramContext& context = gmx::initForCommandLine(&argc, &argv);
     try
     {
+        // MO833 - Record the program's start time.
+        SWatch.setinittime();
+        
         gmx::CommandLineModuleManager manager("gmx", &context);
         registerTrajectoryAnalysisModules(&manager);
         registerLegacyModules(&manager);

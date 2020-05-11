@@ -78,7 +78,8 @@ else()
     target_compile_definitions(gmx PRIVATE HAVE_CONFIG_H)
     target_link_libraries(gmx libgromacs
         ${GMX_COMMON_LIBRARIES}
-        ${GMX_EXE_LINKER_FLAGS})
+        ${GMX_EXE_LINKER_FLAGS}
+        stopwatch)
     if(GMX_X11)
         target_link_libraries(gmx ${X11_LIBRARIES})
     endif()

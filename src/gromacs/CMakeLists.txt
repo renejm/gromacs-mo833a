@@ -33,6 +33,7 @@
 # the research papers on the package. Check out http://www.gromacs.org.
 
 set(LIBGROMACS_SOURCES)
+install(EXPORT stopwatch-targets DESTINATION lib)
 
 if (GMX_CLANG_CUDA)
     include(gmxClangCudaUtils)
@@ -302,6 +303,7 @@ set_target_properties(libgromacs PROPERTIES
 
 gmx_manage_lmfit()
 target_link_libraries(libgromacs PRIVATE lmfit)
+target_link_libraries(libgromacs PRIVATE stopwatch)
 
 # Fix everything found by the latest version of clang that we use in
 # Jenkins testing. This should be updated when we update the latest

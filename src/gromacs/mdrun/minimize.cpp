@@ -107,6 +107,8 @@
 #include "legacysimulator.h"
 #include "shellfc.h"
 
+#include "stopwatch.h"
+
 using gmx::MdrunScheduleWorkload;
 
 //! Utility structure for manipulating states during EM
@@ -2422,8 +2424,14 @@ void LegacySimulator::do_steep()
     count  = 0;
     bDone  = FALSE;
     bAbort = FALSE;
+
+
+
     while (!bDone && !bAbort)
     {
+        // MO833 - Record the paramount iteration's start time.
+        SWatch.setstarttime();
+        
         bAbort = (nsteps >= 0) && (count == nsteps);
 
         /* set new coordinates, except for first step */
@@ -2555,6 +2563,10 @@ void LegacySimulator::do_steep()
         }
 
         count++;
+
+        // MO833 - Record the paramount iteration's end time.
+        SWatch.setendtime();
+
     } /* End of the loop  */
 
     /* Print some data...  */
