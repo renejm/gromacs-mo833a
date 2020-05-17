@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+  - name: Debug task...
+    debug:
+      msg: Build GROMACS! 
+  - name: Compilando o GROMACS...
+    become: yes
+    shell: "wget https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-7-exp-1/experiments/ativ-7-exp-1/build-gromacs.sh && sh build-gromacs.sh"
+  - name: Afrouxar permissões no diretório do GROMACS
+    become: yes
+    shell: "chmod -R 777 gromacs-mo833a/"

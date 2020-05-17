@@ -1,0 +1,7 @@
+login-ubuntu:
+    user: ubuntu
+    keypair_name: mo833_rene
+    keypair_public_file: mo833_rene.pub
+    keypair_private_file: mo833_rene.pem
+    sudo: true
+    sudo_user: root

@@ -2567,6 +2567,9 @@ void LegacySimulator::do_steep()
         // MO833 - Record the paramount iteration's end time.
         SWatch.setendtime();
 
+        // MO833 - Abort loop after 10 iterations.
+        bAbort = SWatch.istimetoabort(10);
+
     } /* End of the loop  */
 
     /* Print some data...  */

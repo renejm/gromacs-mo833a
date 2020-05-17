@@ -1,0 +1,7 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: Configuração do experimento no GROMACS
+    become: no
+    shell: "cd gromacs-mo833a/experiments/ativ-7-exp-1/ && sh config-gromacs.sh"

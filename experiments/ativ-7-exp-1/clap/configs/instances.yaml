@@ -1,0 +1,8 @@
+t2m:
+    provider: aws-config-us-east-1
+    login: login-ubuntu
+    flavor: t2.micro
+    boot_disk_size: 20
+    image_id: ami-039a49e70ea773ffc
+    security_group: mpi_group
+    

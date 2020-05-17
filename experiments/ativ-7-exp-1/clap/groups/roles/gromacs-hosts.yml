@@ -1,0 +1,59 @@
+---
+- hosts: master
+  gather_facts: no
+  tasks:
+  - name: Gerar chave SSH
+    shell: "ssh-keygen -N '' -f ~/.ssh/id_rsa"
+  - name: Obter chave SSH gerada
+    become: no
+    synchronize:
+      src: ~/.ssh/id_rsa.pub
+      dest: /home/rene/mo833-temp/{{inventory_hostname}}-id_rsa.pub
+      mode: pull
+      recursive: yes
+  - name: Criar pasta para as novas chaves SSH
+    shell: "mkdir ssh-gromacs"
+  - name: Subir chaves SSH para hosts
+    become: no
+    synchronize:
+      src: /home/rene/mo833-temp/
+      dest: ~/ssh-gromacs/
+      recursive: yes
+  - name: Instalando chaves SSH nos hosts
+    become: no
+    shell: "cd ~/ssh-gromacs/ && wget https://raw.githubusercontent.com/renejm/gromacs-mo833a/ativ-7-exp-1/experiments/ativ-7-exp-1/install-ssh-gromacs.sh && sh install-ssh-gromacs.sh"
+  - name: Remover arquivo hosts
+    file:
+      path: /home/ubuntu/hosts
+      state: absent
+  - name: Criar arquivo hosts
+    file:
+      path: /home/ubuntu/hosts
+      state: touch
+  - name: Adicionar inventário a /home/ubuntu/hosts
+    blockinfile:
+      marker: ""
+      path: /home/ubuntu/hosts
+      block: |
+        {% for host in groups['all'] %}
+        {{ hostvars[host].ansible_host }} slots=1
+        {% endfor %}
+  - name: Remover arquivo ips.sh
+    file:
+      path: ~/ips.sh
+      state: absent
+  - name: Criar arquivo ips.sh
+    file:
+      path: ~/ips.sh
+      state: touch
+  - name: Adicionar inventário a ~/ips.sh
+    blockinfile:
+      marker: ""
+      path: ~/ips.sh
+      block: |
+        {% for host in groups['all'] %}
+        ssh-keyscan -H {{ hostvars[host].ansible_host }} >> ./.ssh/known_hosts
+        {% endfor %}
+  - name: Executar ips.sh
+    shell: "sh ips.sh"
+    

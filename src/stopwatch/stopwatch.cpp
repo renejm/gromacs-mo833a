@@ -28,3 +28,7 @@ void Stopwatch::setendtime() {
   double endtime = getcurrenttime();
   std::cout << iterationnum << ";" << endtime - inittime << ";" << endtime - starttime << std::endl;
 }
+
+bool Stopwatch::istimetoabort(int maxiterations) {
+    return (iterationnum >= maxiterations);
+}

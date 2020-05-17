@@ -1,0 +1,29 @@
+---
+actions:
+  setup:
+    playbook: roles/gromacs-build.yml
+    description: Configurar instância com as bibliotecas e compilar o GROMACS
+
+
+  simulation-setup:
+    playbook: roles/gromacs-config.yml
+    description: Gerar arquivos para simulação
+
+  
+  fetch-result:
+    playbook: roles/gromacs-fetch.yml
+    description: Baixar resultados gerados
+
+    
+  run:
+    playbook: roles/gromacs-runexp.yml
+    description: Executar o GROMACS
+
+  configure-hosts:
+    playbook: roles/gromacs-hosts.yml
+    description: Configurar os hosts
+
+
+hosts:
+- master
+- slave

@@ -1,0 +1,32 @@
+setups:
+  setup-master:
+    groups:
+    - name: gromacs/master
+    actions:
+    - type: command
+      command: touch MASTER
+
+  
+  setup-slave:
+    groups:
+    - name: gromacs/slave
+    actions:
+    - type: command
+      command: touch SLAVE
+
+      
+clusters:
+  cluster-gmx-4x:
+    nodes:
+      node-slave:
+        type: t2m
+        count: 3
+        min_count: 3
+        setups: 
+        - setup-slave
+      node-master:
+        type: t2m
+        count: 1
+        min_count: 1
+        setups: 
+        - setup-master

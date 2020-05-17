@@ -1,0 +1,7 @@
+aws-config-us-east-1:
+    provider: aws
+    access_keyfile: clap-mo833.pub
+    secret_access_keyfile: clap-mo833.pem
+    url: https://ec2.us-east-1.amazonaws.com
+    region: us-east-1
+    

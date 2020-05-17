@@ -1,0 +1,8 @@
+---
+- name: MPI playbook
+  hosts: master
+  gather_facts: yes
+  tasks:
+  - include_role:
+      name: spits
+      tasks_from: job-status-jm

@@ -1,0 +1,18 @@
+---
+- hosts: master
+  gather_facts: no
+  tasks:
+  - name: Obter resultados .out
+    become: no
+    synchronize:
+      src: ~/gmx.out
+      dest: /home/rene/mo833-temp/{{inventory_hostname}}_gmx.out
+      mode: pull
+      recursive: yes
+  - name: Obter resultados .err
+    become: no
+    synchronize:
+      src: ~/gmx.err
+      dest: /home/rene/mo833-temp/{{inventory_hostname}}_gmx.err
+      mode: pull
+      recursive: yes
