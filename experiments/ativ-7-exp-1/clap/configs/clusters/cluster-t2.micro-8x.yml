@@ -12,9 +12,18 @@ setups:
     actions:
     - type: command
       command: touch SLAVE
+
+  setup-experiment:
+    actions:
+    - type: action
+      name: setup-hosts
+      group: gromacs
+    - type: action
+      name: setup-exp
+      group: gromacs
       
 clusters:
-  cluster-t2.micro-4x:
+  cluster-t2.micro-8x:
     nodes:
       node-slave:
         type: t2m
@@ -28,3 +37,6 @@ clusters:
         min_count: 1
         setups: 
         - setup-master
+
+    after:
+    - setup-experiment

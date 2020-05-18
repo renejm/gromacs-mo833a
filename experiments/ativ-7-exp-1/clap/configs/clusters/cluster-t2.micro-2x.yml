@@ -25,13 +25,13 @@ setups:
 clusters:
   cluster-t2.micro-2x:
     nodes:
-      slave-node:
+      node-slave:
         type: t2m
         count: 1
         min_count: 1
         setups: 
         - setup-slave
-      master-node:
+      node-master:
         type: t2m
         count: 1
         min_count: 1
