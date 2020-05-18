@@ -6,14 +6,12 @@ setups:
     - type: command
       command: touch MASTER
 
-
   setup-slave:
     groups:
     - name: gromacs/slave
     actions:
     - type: command
       command: touch SLAVE
-
 
   setup-experiment:
     actions:
@@ -24,9 +22,8 @@ setups:
       name: setup-exp
       group: gromacs
 
-
 clusters:
-  cluster-gmx-2x:
+  cluster-t2.micro-2x:
     nodes:
       slave-node:
         type: t2m

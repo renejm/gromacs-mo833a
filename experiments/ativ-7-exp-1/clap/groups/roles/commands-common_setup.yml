@@ -5,5 +5,3 @@
   - name: Debug task....
     debug:
       msg: Commands-common setup action called! 
-
-

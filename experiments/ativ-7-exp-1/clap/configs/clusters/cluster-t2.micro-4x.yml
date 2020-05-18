@@ -5,7 +5,6 @@ setups:
     actions:
     - type: command
       command: touch MASTER
-
   
   setup-slave:
     groups:
@@ -13,10 +12,9 @@ setups:
     actions:
     - type: command
       command: touch SLAVE
-
       
 clusters:
-  cluster-gmx-4x:
+  cluster-t2.micro-4x:
     nodes:
       node-slave:
         type: t2m
