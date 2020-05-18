@@ -26,6 +26,6 @@ cmake .. -DGMX_BUILD_OWN_FFTW=ON -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=m
 echo "CMake executado!" >> ~/log_ativ6.txt
 
 echo "INICIANDO COMPILAÇÃO!" >> ~/log_ativ6.txt
-make -i -j6 1> compilation.out 2> compilation.err
+make -i 1> compilation.out 2> compilation.err
 
 echo "Compilação concluída!" >> ~/log_ativ6.txt
