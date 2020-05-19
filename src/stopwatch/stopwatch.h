@@ -10,6 +10,7 @@ namespace gmx {
     void setinittime();
     void setstarttime();
     void setendtime();
+    bool istimetoabort(int maxiterations);
   };
 }
 
