@@ -4,14 +4,14 @@ setups:
     - name: gromacs/master
     actions:
     - type: command
-      command: touch MASTER
+      command: touch master.txt
   
   setup-slave:
     groups:
     - name: gromacs/slave
     actions:
     - type: command
-      command: touch SLAVE
+      command: touch slave.txt
 
   setup-experiment:
     actions:
