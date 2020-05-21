@@ -4,6 +4,8 @@ echo -e "\e[92m\e[1m********************************************************"
 echo -e "*************** EXPERIMENTO COM 4 NÓS... ***************"
 echo -e "********************************************************\e[0m"
 echo " "
+rm -f /home/rene/.clap/storage/platform.json
+rm -f /home/rene/.clap/storage/modules/cluster/cluster.json
 clapp cluster start cluster-t2.micro-4x
 clusterid=$(clapp cluster list | grep id | cut -d' ' -f2)
 nodeid=$(clapp node list | grep node-master | cut -d' ' -f3 | cut -d'=' -f2 | cut -d'`' -f2)
