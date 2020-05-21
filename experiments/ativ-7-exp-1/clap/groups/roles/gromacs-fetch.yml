@@ -5,14 +5,14 @@
   - name: Obter resultados .out
     become: no
     synchronize:
-      src: ~/gmx.out
+      src: /home/ubuntu/gmx.out
       dest: /home/rene/mo833-temp/{{inventory_hostname}}_gmx.out
       mode: pull
       recursive: yes
   - name: Obter resultados .err
     become: no
     synchronize:
-      src: ~/gmx.err
+      src: /home/ubuntu/gmx.err
       dest: /home/rene/mo833-temp/{{inventory_hostname}}_gmx.err
       mode: pull
       recursive: yes

@@ -4,4 +4,4 @@
   tasks:
   - name: RUNNING SIM
     become: no
-    shell: "cd ~/gromacs-mo833a/experiments/ativ-7-exp-1/ && mpirun -np {{ groups['all']|length }} --hostfile /home/ubuntu/hosts ../../build/bin/gmx_mpi mdrun -v -deffnm em 1> ~/gmx.out 2> ~/gmx.err"
+    shell: "cd /home/ubuntu/gromacs-mo833a/experiments/ativ-7-exp-1/ && mpirun -np {{ groups['all']|length }} --hostfile /home/ubuntu/hosts ../../build/bin/gmx_mpi mdrun -v -deffnm em 1> /home/ubuntu/gmx.out 2> /home/ubuntu/gmx.err"
