@@ -1,0 +1,72 @@
+Warning: Permanently added '172.31.67.166' (ECDSA) to the list of known hosts.
+Warning: Permanently added '172.31.69.92' (ECDSA) to the list of known hosts.
+Warning: Permanently added '172.31.75.82' (ECDSA) to the list of known hosts.
+Warning: Permanently added '172.31.70.230' (ECDSA) to the list of known hosts.
+Warning: Permanently added '172.31.68.18' (ECDSA) to the list of known hosts.
+Warning: Permanently added '172.31.78.158' (ECDSA) to the list of known hosts.
+Warning: Permanently added '172.31.70.160' (ECDSA) to the list of known hosts.
+       :-) GROMACS - gmx mdrun, 2020.2-dev-20200524-046766c95-unknown (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.2-dev-20200524-046766c95-unknown
+Executable:   /home/ubuntu/gromacs-mo833a/experiments/ativ-7-exp-1/experiment/../../../build/bin/gmx_mpi
+Data prefix:  /home/ubuntu/gromacs-mo833a (source tree)
+Working dir:  /home/ubuntu/gromacs-mo833a/experiments/ativ-7-exp-1/experiment
+Command line:
+  gmx_mpi mdrun -v -deffnm em
+
+Reading file em.tpr, VERSION 2020.2-dev-20200524-046766c95-unknown (single precision)
+Using 8 MPI processes
+Using 1 OpenMP thread per MPI process
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+03
+   Number of steps    =        50000
+Step=    0, Dmax= 1.0e-02 nm, Epot= -3.96133e+05 Fmax= 2.20591e+05, atom= 28043
+Step=    1, Dmax= 1.0e-02 nm, Epot= -4.71029e+05 Fmax= 8.29062e+04, atom= 2201
+Step=    2, Dmax= 1.2e-02 nm, Epot= -5.57181e+05 Fmax= 3.06086e+04, atom= 31247
+Step=    3, Dmax= 1.4e-02 nm, Epot= -6.28856e+05 Fmax= 1.12282e+04, atom= 31247
+Step=    4, Dmax= 1.7e-02 nm, Epot= -6.80542e+05 Fmax= 6.80665e+03, atom= 2151
+Step=    5, Dmax= 2.1e-02 nm, Epot= -7.11851e+05 Fmax= 9.98314e+03, atom= 2147
+Step=    6, Dmax= 2.5e-02 nm, Epot= -7.24992e+05 Fmax= 2.95770e+04, atom= 2147
+Step=    7, Dmax= 3.0e-02 nm, Epot= -7.32338e+05 Fmax= 1.62734e+04, atom= 2147
+Step=    8, Dmax= 3.6e-02 nm, Epot= -7.40209e+05 Fmax= 3.95966e+04, atom= 2147
+Step=    9, Dmax= 4.3e-02 nm, Epot= -7.46216e+05 Fmax= 2.58230e+04, atom= 2147
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 1000 in 10 steps
+Potential Energy  = -7.4621581e+05
+Maximum force     =  2.5823016e+04 on atom 2147
+Norm of force     =  3.6950101e+02
+
+GROMACS reminds you: "Occams Razor is the scientific principle that, all things being equal, the simplest explanation is always the dog ate my homework." (Greg Tamblyn)
+
+[ip-172-31-65-25:31748] 7 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-65-25:31748] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

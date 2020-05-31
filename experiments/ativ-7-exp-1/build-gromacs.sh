@@ -2,11 +2,6 @@
 
 echo "Iniciando experimento..." > /home/ubuntu/log_atividade7.txt
 
-sudo apt-get update 2>> /home/ubuntu/log_atividade7.txt
-sudo apt-get install -y wget make gcc libgfortran3 sysstat libibnetdisc-dev openmpi-bin libopenmpi-dev libhdf5-openmpi-dev gfortran build-essential git 2>> /home/ubuntu/log_atividade7.txt
-
-echo "Pacotes instalados!" >> /home/ubuntu/log_atividade7.txt
-
 wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2-Linux-x86_64.sh 2>> /home/ubuntu/log_atividade7.txt
 chmod +x cmake-3.17.2-Linux-x86_64.sh
 bash cmake-3.17.2-Linux-x86_64.sh --skip-license
