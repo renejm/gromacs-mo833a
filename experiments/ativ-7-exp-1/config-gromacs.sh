@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget https://files.rcsb.org/view/6LVN.pdb
+wget --no-check-certificate https://files.rcsb.org/view/6LVN.pdb
 
 cat <<EOF >>./ions.mdp
 integrator  = steep     	; Algorithm (steep = steepest descent minimization)
